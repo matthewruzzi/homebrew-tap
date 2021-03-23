@@ -11,6 +11,6 @@ cask "ytontv" do
   app "YouTubeonTV-darwin-x64/YouTube\ on\ TV.app"
 
   postflight do
-    system "xattr -r -d com.apple.quarantine '#{appdir}/YouTube\ on\ TV.app'"
+    system "xattr", "-r", "-d", "com.apple.quarantine", "#{appdir}/YouTube on TV.app"
   end
 end
