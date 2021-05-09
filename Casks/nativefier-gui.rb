@@ -1,11 +1,11 @@
 cask "nativefier-gui" do
-  version "0.1.6"
+  version "0.1.9"
 
   if Hardware::CPU.intel?
-    sha256 "d0ebb043f54074b1c83198d85e7047afdebb7651e13a0add0d9821e6d9337641"
+    sha256 "a967ec906ef601d1d2a69c3aaf59b881a57737bed00ceb6788ae9bee4e68ffa8"
     url "https://github.com/mattruzzi/nativefier-gui/releases/download/#{version}/nativefier-gui-darwin-x64.zip"
   else
-    sha256 "4978766a5b04c727cc19ad6e3c9e1c57b68601531f5c5916bfbea67a593483ad"
+    sha256 "f49a7a40c6f201be7f61c86b0b083b2d166797756fc39cf217fce2b09e81b632"
     url "https://github.com/mattruzzi/nativefier-gui/releases/download/#{version}/nativefier-gui-darwin-arm64.zip"
   end
 
