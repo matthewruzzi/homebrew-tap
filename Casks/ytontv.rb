@@ -1,8 +1,14 @@
 cask "ytontv" do
-  version "43.0.2,12.0.4"
-  sha256 "3ca57f55c97b6db7ca0049d1c0bd731f7549a484e467b31d18eca65c0d6a7790"
+  version "43.1.2,12.0.7"
+  if Hardware::CPU.intel?
+    sha256 "870703c7104a4b01b92ff524f58caa2fad7bb14a0e16bda511846e5ccab0ef4a"
+    url "https://github.com/mattruzzi/Nativefier-YouTube-on-TV-for-Desktop/releases/download/#{version}/YouTubeonTV-darwin-x64.zip"
+  else
+    sha256 "46f7db35865df2cfae59e14790a6e1312fe1eccba1328573411446c1c14eab19"
+    url "https://github.com/mattruzzi/Nativefier-YouTube-on-TV-for-Desktop/releases/download/#{version}/YouTubeonTV-darwin-arm64.zip"
+  end
 
-  url "https://github.com/mattruzzi/Nativefier-YouTube-on-TV-for-Desktop/releases/download/#{version}/YouTubeonTV-darwin-x64.zip"
+  
   appcast "https://github.com/mattruzzi/Nativefier-YouTube-on-TV-for-Desktop/releases.atom"
   name "YouTube on TV.app"
   desc "Electron/Nativefier wrapper for YouTube.com/tv (YouTube Smart TV interface)"
