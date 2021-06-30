@@ -1,12 +1,12 @@
 cask "ytontv" do
-  version "44.0.2,12.0.10"
+  version "44.0.6,12.0.13"
 
   if Hardware::CPU.intel?
-    sha256 "eaf0d03cf768480ba86fc021abf04076123c34fd8d5f084b1b00f820993f3bc4"
+    sha256 "9b8a0a81cbed35660794cd31cf6531f69ffbbcb918353649829269a386ca959f"
     url "https://github.com/mattruzzi/Nativefier-YouTube-on-TV-for-Desktop/releases/download/#{version}/YouTubeonTV-darwin-x64.zip"
     app "YouTubeonTV-darwin-x64/YouTube\ on\ TV.app"
   else
-    sha256 "92a9f247d2b71df8e68afde1e0d3f225b8d350c33135d877a6d12564e5786fc2"
+    sha256 "a43a9d5099071b3f74e78d3798bea66f09fe5b79c16c607dd9ab935894e2980d"
     url "https://github.com/mattruzzi/Nativefier-YouTube-on-TV-for-Desktop/releases/download/#{version}/YouTubeonTV-darwin-arm64.zip"
     app "YouTubeonTV-darwin-arm64/YouTube\ on\ TV.app"
   end
