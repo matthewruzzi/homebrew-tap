@@ -1,5 +1,5 @@
 cask "ytontv" do
-  version "50.0.0,20.3.0"
+  version "50.0.1,22.0.0"
 
   if Hardware::CPU.intel?
     sha256 "379a42060b3df396e13df668ba24752635a5b55b75d5716170b106b7d431de42"
