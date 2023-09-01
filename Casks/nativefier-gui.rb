@@ -9,13 +9,16 @@ cask "nativefier-gui" do
     url "https://github.com/mattruzzi/nativefier-gui/releases/download/#{version}/nativefier-gui-darwin-arm64.zip"
   end
 
-  appcast "https://github.com/mattruzzi/nativefier-gui/releases.atom"
   name "Nativefier GUI"
   desc "Make any web page a desktop application"
   homepage "https://github.com/mattruzzi/nativefier-gui"
-
   app "nativefier-gui.app"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+  
   postflight do
     system "xattr", "-r", "-d", "com.apple.quarantine", "#{appdir}/nativefier-gui.app"
   end
