@@ -11,11 +11,15 @@ cask "ytontv" do
     app "YouTubeonTV-darwin-arm64/YouTube\ on\ TV.app"
   end
 
-  appcast "https://github.com/mattruzzi/Nativefier-YouTube-on-TV-for-Desktop/releases.atom"
   name "YouTube on TV.app"
   desc "Electron/Nativefier wrapper for YouTube.com/tv (YouTube Smart TV interface)"
   homepage "https://github.com/mattruzzi/Nativefier-YouTube-on-TV-for-Desktop"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+  
   postflight do
     system "xattr", "-r", "-d", "com.apple.quarantine", "#{appdir}/YouTube on TV.app"
   end
