@@ -1,13 +1,13 @@
 cask "nativefier-gui" do
-  version "0.8.0"
+  version "0.9.0"
 
   on_arm do
-    sha256 "d9fdc69cf43d3b810ccf4bbab0584f92eeaed5fd5f8b3a0455174e199ff54576"
+    sha256 "4fefb462d78edf50a66d1085a21303cd70f2c6d9a46185c3bad6db3bea4963b9"
 
     url "https://github.com/mattruzzi/nativefier-gui/releases/download/#{version}/nativefier-gui-darwin-arm64.zip"
   end
   on_intel do
-    sha256 "a8aed11e41ebaf2dfdd5f8fc1a21c8ea53b78d650029837fbb7687c27e7fa3c1"
+    sha256 "5273835199059e43aa863375e798fa28625b3fb6a5e62a131dcd43a6457d2837"
 
     url "https://github.com/mattruzzi/nativefier-gui/releases/download/#{version}/nativefier-gui-darwin-x64.zip"
   end
